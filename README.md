@@ -1,6 +1,4 @@
 # visual_timer #
-================
-### README ###
 
 About:
 --
