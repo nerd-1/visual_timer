@@ -17,9 +17,10 @@ setuptools.setup(
     keywords=["timer","ui"]
     packages=setuptools.find_packages(),
     classifiers=[
+        "Programming Language :: Python"
         "Programming Language :: Python :: 3",
         "Development Status :: 0.1 - Beta",
-        "License :: DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE",
+        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Topic :: Other/Nonlisted Topic",
         "Enviroment :: Curses"
