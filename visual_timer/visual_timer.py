@@ -7,20 +7,12 @@ import curses
 import math
 import time
 import sys, getopt
+import os
+import re
 
 timer_set = 60
 seconds = 0
-time_str = str(sys.argv[1])
 
-#def set_time(argv):
-#	try:
-#		opts, args = getopt.getopt(argv,"t:",["time="])
-#	except getopt.GetoptError:
-#		print ('timer.py -t <time>')
-#		sys.exit(2)
-#	for opt, arg in opts:
-#		if opt in ("-t", "--time"):
-#			timer_set = arg
 
 class curses_stdscr:
     def __enter__(self):
@@ -36,8 +28,21 @@ class curses_stdscr:
         curses.echo()
         curses.endwin()
 
+def check_input(time_str):
+	if re.match("[0-9][0-9]:[0-9][0-9]:[0-9][0-9]", time_str) != None:
+		return(True)
+	else:
+		return(False)
+
+def output_help():
+	os.chdir("..")
+	os.chdir("docs")
+	file = open("usage.txt", "r")
+	file_out = file.read()
+	print(file_out)
+	file.close
+
 def divide_y(timer_set, y_dim):
-	
 	y_sec_unit = y_dim/timer_set
 	return(y_sec_unit)
 
@@ -84,7 +89,20 @@ def convert_to_sec(time_str):
     h, m, s = time_str.split(':')
     return int(h) * 3600 + int(m) * 60 + int(s)
 
-#if __name__ == '__main__':
+
+# Check for empty strings #
+try:
+	time_str = str(sys.argv[1])
+except:
+	output_help()
+	sys.exit()
+
+# Check for invalid strings #
+if check_input(time_str) == False:
+	output_help()
+	sys.exit()
+
+# Main #
 with curses_stdscr() as stdscr:
 	timer_set = convert_to_sec(time_str)
 	stdscr = curses.initscr()

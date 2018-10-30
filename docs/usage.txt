@@ -1,0 +1,6 @@
+Usage: visual_timer [TIME]
+
+  Starts a countdown from TIME. Must be in the format 'HH:MM:SS'
+
+Options:
+  -h --help                 Show this message and exit
