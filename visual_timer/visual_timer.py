@@ -6,7 +6,7 @@
 import curses
 import math
 import time
-import sys, getopt
+import sys
 import os
 import re
 

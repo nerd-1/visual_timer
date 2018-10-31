@@ -6,13 +6,13 @@ Visual timer is a simple terminal based timer that inspired by the principal of 
 
 Usage:
 --
-* python3 main.py [TIME]
+* visual_timer [TIME]
 
 Starts a countdown from the specified time. Must be in the format: HH:MM:SS
 
 Installation:
 --
-Clone the repo and run the main
+pip install visual_timer
 
 Todo:
 --
