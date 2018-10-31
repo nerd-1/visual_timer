@@ -5,7 +5,7 @@ except ImportError:
 
 setup(
     name='visual_timer',  
-    version='0.1',
+    version='0.2',
     description="Visual timer is a simple terminal based timer",
     author="nerd1pypi",
     authoremail="nerd1pypi@cock.li",

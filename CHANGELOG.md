@@ -1,3 +1,12 @@
+0.2
+===
+
+2018-31-10
+
+* uploaded to pypi \o/
+* added help
+* various bug fixes
+
 0.1
 ===
 
