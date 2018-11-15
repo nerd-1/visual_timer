@@ -1,8 +1,7 @@
 
 import pytest
 
-import timer_functions.py
-# TODO: Update function calls
+import timer_functions
 
 class Test_check_input(object):
 	def test_check_input_returns_true_with_correct_format(self):
@@ -17,7 +16,7 @@ class Test_check_input(object):
 
 def test_divide_y_returns_the_correct_result():
 	# TODO: Call 'divide_y' and make sure it returns '0.5' where 'timer_set' is 120 and 'y_dim' is 60
-	result = func.divide_y(120, 60)
+	result = timer_functions.divide_y(120, 60)
 	assert result == 0.5
 
 class Test_render_y(object):
