@@ -22,3 +22,6 @@ Disclaimer:
 --
 Visual timer is super early stage. Don't call me a stooge when you realise the runtime is O(n^2), or that the timer drifts at higher resolutions/time settings.
 
+Testing:
+--
+Run: python -m pytest test_timer_functions.py
