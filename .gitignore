@@ -1,0 +1,9 @@
+.DS_Store
+/__pycache__/
+*.pyc
+timer_functions.cpython-37.pyc
+timer_functions.cpython-38.pyc
+timer_functions.cpython-39.pyc
+visual_timer.cpython-37.pyc
+visual_timer.cpython-38.pyc
+visual_timer.cpython-39.pyc
