@@ -4,8 +4,8 @@ import time
 import sys
 import os
 import re
+import curses
 
-timer_set = 60
 seconds = 0
 
 def is_even(number):
@@ -46,7 +46,7 @@ def divide_y(timer_set, y_dim):
 	y_sec_unit = y_dim/timer_set
 	return(y_sec_unit)
 
-def render_y(seconds, y_sec_unit, y_pixel_count):
+def render_y(seconds, y_sec_unit, y_pixel_count, stdscr, x_dim, y_dim):
 	cursor_y = 0
 	cursor_x = 0
 	for sec_unit in range(int(y_pixel_count)):
@@ -58,14 +58,14 @@ def render_y(seconds, y_sec_unit, y_pixel_count):
 			pass
 		cursor_y += 1
 		cursor_x = 0
-	return()
+	return(stdscr)
 
-def render_time(seconds):
-	formated_time = format_seconds(seconds)
+def render_time(seconds, stdscr, y_dim, x_dim, formated_time, timer_set):
+	formated_time = format_seconds(seconds, timer_set)
 	stdscr.addstr(math.ceil(((y_dim)-1)/2), math.ceil((x_dim-len(formated_time))/2), formated_time, curses.A_BOLD)
-	return()
+	return(stdscr, formated_time)
 
-def format_seconds(seconds, hide_seconds=False):
+def format_seconds(seconds, timer_set, hide_seconds=False):
     #This function was taken from the termdown project and was written by trehn
     seconds_remaining = timer_set - seconds
     if seconds_remaining <= 60:
