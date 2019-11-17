@@ -2,7 +2,7 @@
 
 About:
 --
-Visual timer is a simple terminal based timer that inspired by the principal of user-centric design. Unlike other timers, visual timer uses a spatial display of time that it allows you to have a peripheral awareness of the time. When you’re working on things that require higher-order thought, such as writing code, or thinking through a complex design process, you’re holding a lot of things in your head. Looking at the clock and doing base-60 subtraction will immediately snap you out of this thought process. Having a visual timer instance running in a window is a “big blob” that you can keep an eye on without having to divert your attention.
+Visual timer is a simple terminal based timer; inspired by the principal of user-centric design.
 
 Usage:
 --
