@@ -1,5 +1,7 @@
 # visual_timer #
 
+![example](/example.gif?raw=true)
+
 About:
 --
 Visual timer is a simple terminal based timer; inspired by the principal of user-centric design.
