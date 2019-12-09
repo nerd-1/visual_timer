@@ -1,4 +1,5 @@
-
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 import math
 import time
 import sys
@@ -57,7 +58,7 @@ def render_y(seconds, y_sec_unit, y_pixel_count, stdscr, x_dim, y_dim):
 	for sec_unit in range(int(y_pixel_count)):
 		try:
 			while (cursor_x < x_dim) and (cursor_y < y_dim):
-				stdscr.addch(cursor_y, cursor_x, "█")
+				stdscr.addch(cursor_y, cursor_x, "#") # Can't use unicode '█' as curses does not support unicode. Your best bet is either using ncurses or making python play nice with extended ascii
 				cursor_x += 1
 		except:
 			pass
@@ -68,7 +69,7 @@ def render_y(seconds, y_sec_unit, y_pixel_count, stdscr, x_dim, y_dim):
 def render_time(seconds, stdscr, y_dim, x_dim, formated_time, timer_set):
 	#Renders the time from "format_seconds" on to "stdscr"
 	formated_time = format_seconds(seconds, timer_set)
-	stdscr.addstr(math.ceil(((y_dim)-1)/2), math.ceil((x_dim-len(formated_time))/2), formated_time, curses.A_BOLD)
+	stdscr.addstr(int(math.ceil(((y_dim)-1)/2)), int(math.ceil((x_dim-len(formated_time))/2)), formated_time, curses.A_BOLD)
 	return(stdscr, formated_time)
 
 def format_seconds(seconds, timer_set, hide_seconds=False):

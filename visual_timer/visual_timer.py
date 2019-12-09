@@ -1,3 +1,5 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 import timer_functions
 
@@ -12,6 +14,7 @@ timer_set = 60
 seconds = 0
 seconds_remaining = None
 formated_time = None
+curses.initscr()
 curses.curs_set(0)
 
 # Check for empty strings #
